@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road Infrastructure & Transportation Monitoring System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: url("../assets/img/cityhall.jpeg") center/cover no-repeat fixed;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 0;
+      }
+
+      .nav,
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .report-card {
+        transition: all 0.3s ease-out;
+      }
+
+      .report-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .slide-in {
+        animation: slideIn 0.6s ease-out;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <header class="nav w-full px-[60px] py-[18px] flex justify-between items-center bg-white/15 backdrop-blur-[18px] border-b border-white/25 shadow-[0_4px_25px_rgba(0,0,0,0.25)] fixed top-0 left-0 z-[100]">
+      <div class="nav-logo text-white opacity-80 transition-all duration-200 hover:opacity-100 font-semibold">LGU Portal</div>
+      <div class="nav-links">
+        <a href="index.html" class="ml-[25px] no-underline text-white opacity-80 transition-all duration-200 hover:opacity-100 font-semibold">Home</a>
+        <a href="../pages/login.html" class="ml-[25px] no-underline text-white opacity-80 transition-all duration-200 hover:opacity-100 font-semibold">Login</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper pt-[100px] pb-[50px]">
+      <!-- Hero Section -->
+      <section class="px-[60px] py-[80px] text-center fade-in-up">
+        <div class="glass-card rounded-[20px] p-[60px] max-w-[1000px] mx-auto">
+          <h1 class="text-[48px] font-bold text-gray-800 mb-[20px]">Road Infrastructure & Transportation Monitoring System</h1>
+          <p class="text-[20px] text-gray-600 mb-[30px] max-w-[800px] mx-auto">
+            Empowering citizens with real-time information about road conditions, infrastructure projects, and transportation services in our community.
+          </p>
+          <div class="flex gap-[20px] justify-center flex-wrap">
+            <button class="bg-gray-700 text-white px-[30px] py-[15px] rounded-[12px] font-semibold hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1">
+              View Reports
+            </button>
+            <button class="border-2 border-gray-700 text-gray-700 px-[30px] py-[15px] rounded-[12px] font-semibold hover:bg-gray-700 hover:text-white transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Stats -->
+      <section class="px-[60px] py-[60px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] max-w-[1200px] mx-auto">
+          <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+            <div class="text-[48px] font-bold text-gray-700 mb-[10px]">247</div>
+            <div class="text-[18px] text-gray-600">Active Projects</div>
+          </div>
+          <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+            <div class="text-[48px] font-bold text-gray-700 mb-[10px]">1,842</div>
+            <div class="text-[18px] text-gray-600">Road Reports</div>
+          </div>
+          <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+            <div class="text-[48px] font-bold text-gray-700 mb-[10px]">98%</div>
+            <div class="text-[18px] text-gray-600">Citizen Satisfaction</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Reports -->
+      <section class="px-[60px] py-[60px]">
+        <div class="max-w-[1200px] mx-auto">
+          <h2 class="text-[36px] font-bold text-white mb-[40px] text-center">Recent Road Reports</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+            <!-- Report Card 1 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-800 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-800 font-semibold">High Priority</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Main Street Pothole Repair</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Multiple potholes reported on Main Street between 1st and 3rd Avenue. Repair scheduled for next week.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Reported: 2 hours ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+
+            <!-- Report Card 2 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-600 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-600 font-semibold">Medium Priority</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Traffic Light Malfunction</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Traffic light at Oak Avenue & Pine Street not functioning properly. Maintenance team notified.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Reported: 5 hours ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+
+            <!-- Report Card 3 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-400 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-600 font-semibold">Low Priority</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Street Cleaning Request</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Request for street cleaning on Elm Street. Debris accumulation reported after recent storm.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Reported: 1 day ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+
+            <!-- Report Card 4 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-500 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-600 font-semibold">Information</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Road Construction Update</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Highway 101 expansion project progressing well. Expected completion by Q4 2025.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Updated: 2 days ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+
+            <!-- Report Card 5 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-800 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-800 font-semibold">High Priority</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Bridge Inspection Required</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Structural concerns reported at Riverside Bridge. Immediate inspection scheduled.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Reported: 3 days ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+
+            <!-- Report Card 6 -->
+            <div class="glass-card rounded-[15px] p-[25px] report-card">
+              <div class="flex items-center mb-[15px]">
+                <div class="w-[12px] h-[12px] bg-gray-400 rounded-full mr-[10px]"></div>
+                <span class="text-[14px] text-gray-600 font-semibold">Completed</span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Sidewalk Repair Complete</h3>
+              <p class="text-[16px] text-gray-600 mb-[15px]">Sidewalk repair on Maple Avenue completed successfully. All safety concerns addressed.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] text-gray-500">Completed: 4 days ago</span>
+                <button class="text-gray-700 hover:text-gray-900 font-semibold text-[14px]">View Details →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="px-[60px] py-[60px]">
+        <div class="max-w-[1200px] mx-auto">
+          <h2 class="text-[36px] font-bold text-white mb-[40px] text-center">Our Services</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+            <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+              <div class="w-[48px] h-[48px] mx-auto mb-[15px] bg-gray-300 rounded-lg flex items-center justify-center">
+                <svg class="w-[24px] h-[24px] text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Road Monitoring</h3>
+              <p class="text-[16px] text-gray-600">Real-time monitoring of road conditions and infrastructure status</p>
+            </div>
+            <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+              <div class="w-[48px] h-[48px] mx-auto mb-[15px] bg-gray-300 rounded-lg flex items-center justify-center">
+                <svg class="w-[24px] h-[24px] text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Traffic Analytics</h3>
+              <p class="text-[16px] text-gray-600">Detailed traffic flow analysis and optimization insights</p>
+            </div>
+            <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+              <div class="w-[48px] h-[48px] mx-auto mb-[15px] bg-gray-300 rounded-lg flex items-center justify-center">
+                <svg class="w-[24px] h-[24px] text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Project Updates</h3>
+              <p class="text-[16px] text-gray-600">Latest information on ongoing infrastructure projects</p>
+            </div>
+            <div class="glass-card rounded-[15px] p-[30px] text-center report-card">
+              <div class="w-[48px] h-[48px] mx-auto mb-[15px] bg-gray-300 rounded-lg flex items-center justify-center">
+                <svg class="w-[24px] h-[24px] text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-[20px] font-semibold text-gray-800 mb-[10px]">Citizen Reports</h3>
+              <p class="text-[16px] text-gray-600">Easy reporting system for road and infrastructure issues</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="px-[60px] py-[80px]">
+        <div class="glass-card rounded-[20px] p-[60px] text-center max-w-[800px] mx-auto">
+          <h2 class="text-[36px] font-bold text-gray-800 mb-[20px]">Stay Informed</h2>
+          <p class="text-[18px] text-gray-600 mb-[30px]">Sign up for updates on road conditions, construction projects, and traffic alerts in your area.</p>
+          <div class="flex gap-[15px] justify-center flex-wrap max-w-[500px] mx-auto">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-[20px] py-[15px] rounded-[10px] border border-gray-300 bg-white/70 outline-none focus:border-gray-700">
+            <button class="bg-gray-700 text-white px-[30px] py-[15px] rounded-[10px] font-semibold hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container">
+        <!-- Inline Footer Fallback -->
+        <footer class="glass-card border-t border-white/25">
+            <div class="px-[60px] py-[30px]">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[40px]">
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-800 mb-[15px]">About</h3>
+                        <p class="text-[16px] text-gray-600">Comprehensive road infrastructure monitoring system serving our community with transparency and efficiency.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-800 mb-[15px]">Quick Links</h3>
+                        <ul class="space-y-[10px]">
+                            <li><a href="#" class="text-[16px] text-gray-600 hover:text-gray-700">Report an Issue</a></li>
+                            <li><a href="#" class="text-[16px] text-gray-600 hover:text-gray-700">Current Projects</a></li>
+                            <li><a href="#" class="text-[16px] text-gray-600 hover:text-gray-700">Traffic Updates</a></li>
+                            <li><a href="login.html" class="text-[16px] text-gray-600 hover:text-gray-700">Staff Portal</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-800 mb-[15px]">Contact</h3>
+                        <p class="text-[16px] text-gray-600">Phone: (555) 123-4567</p>
+                        <p class="text-[16px] text-gray-600">Email: roads@lgu.gov.ph</p>
+                        <p class="text-[16px] text-gray-600">Address: City Hall, Main Street</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-300 mt-[30px] pt-[20px] text-center">
+                    <div class="flex justify-center gap-[30px] mb-[15px]">
+                        <a href="privacy.html" class="text-[14px] text-gray-600 hover:text-gray-700">Privacy Policy</a>
+                        <a href="about.html" class="text-[14px] text-gray-600 hover:text-gray-700">About</a>
+                        <a href="help.html" class="text-[14px] text-gray-600 hover:text-gray-700">Help</a>
+                    </div>
+                    <p class="text-[14px] text-gray-600">© 2025 LGU Road Infrastructure & Transportation Monitoring System. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Footer Loader Scripts -->
+    <script src="../assets/js/footer-loader.js"></script>
+    <script src="../includes/footer-backup.js"></script>
+  </body>
+</html>
