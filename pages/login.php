@@ -5,8 +5,8 @@ ini_set('session.use_only_cookies', 1);
 ini_set('session.cookie_secure', 0); // Set to 1 if using HTTPS
 
 session_start();
-require_once 'includes/config.php';
-require_once 'includes/functions.php';
+require_once '../includes/config.php';
+require_once '../includes/functions.php';
 
 // Check if we should include home page directly
 $homePagePath = __DIR__ . '/lgu-portal/public/login.php';
@@ -504,9 +504,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['submit_register']) &
 
     <footer class="footer">
       <div class="footer-links">
-        <a href="<?php echo $basePath; ?>../privacy.html">Privacy Policy</a>
-        <a href="<?php echo $basePath; ?>../about.html">About</a>
-        <a href="<?php echo $basePath; ?>../help.html">Help</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../about.html">About</a>
+        <a href="../help.html">Help</a>
       </div>
 
       <div class="footer-logo">
