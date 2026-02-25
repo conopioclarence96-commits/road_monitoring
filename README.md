@@ -22,7 +22,7 @@ road_monitoring/
 │   ├── about.html         # About us page
 │   ├── privacy.html       # Privacy policy page
 │   └── help.html          # Help and FAQ page
-└── includes/              # Reusable components (future use)
+└── components/           # Reusable components (footer, etc.)
 ```
 
 ## 🚀 Getting Started
