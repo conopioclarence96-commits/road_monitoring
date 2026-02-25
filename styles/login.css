@@ -1,0 +1,194 @@
+/* Login page specific styles */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 2rem;
+}
+
+.slider {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.panel {
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card {
+    text-align: center;
+}
+
+.card.wide {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.icon-top {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.input-box {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.two-column-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.error-message {
+    background: #fee !important;
+    color: #c33 !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+}
+
+.success-message {
+    background: #efe !important;
+    color: #060 !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Panel transitions */
+.wrapper.show-register .panel.login {
+    transform: translateX(-100%);
+}
+
+.wrapper.show-register .panel.register {
+    transform: translateX(-100%);
+}
+
+.wrapper.show-additional .panel.login {
+    transform: translateX(-200%);
+}
+
+.wrapper.show-additional .panel.register {
+    transform: translateX(-200%);
+}
+
+.wrapper.show-additional .panel.additional {
+    transform: translateX(-200%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1rem;
+    }
+    
+    .slider {
+        max-width: 100%;
+    }
+    
+    .two-column-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav {
+        padding: 1rem;
+    }
+    
+    .footer-links a {
+        margin: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+}
