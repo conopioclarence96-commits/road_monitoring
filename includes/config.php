@@ -1,9 +1,9 @@
 <?php
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_USER', 'rgmapinfragov_roadmon');
+define('DB_USER', 'rgmapinfragovs_roadmon');
 define('DB_PASS', 'RoadMonitoring@2024');
-define('DB_NAME', 'rgmapinfragov_roadmonitoring');
+define('DB_NAME', 'rgmapinfragovs_roadmonitoring');
 
 // Create database connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
